@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: black; 
+    color: white; 
+    transition: background-color 0.3s ease; 
+}
+.bio-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+h1 {
+    text-align: center;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border: 3px solid white; 
+    display: block;
+    margin: 0 auto 20px; 
+    border-radius: 50%; 
+	object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+.profile-image:hover {
+    transform: scale(1.1); 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid white; 
+}
+th, td {
+    border: 1px solid white; 
+    padding: 8px;
+    text-align: left;
+}
+footer {
+	text-align: center;
+}
+.carousel {
+    max-width: 100%;
+    max-height: 300px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    width: 100%;
+    display: flex;
+}
+
+.carousel img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 20px;
+    }
+    .bio-container {
+        max-width: 600px;
+    }
+    .carousel {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .bio-container {
+        max-width: 300px;
+    }
+    .carousel {
+        max-width: 250px;
+        margin: 10px auto;
+    }
+}

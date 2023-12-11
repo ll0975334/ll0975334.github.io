@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Bio - Lake T. LeJeune</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bio-container">
+        <header>
+            <h1>Lake T. LeJeune</h1>
+            <img src="profile-image.jpg" alt="Profile Image" class="profile-image">
+        </header>
+        <section class="bio-text">
+            <h2>About Me</h2>
+            <p>Welcome to my professional bio page! I am currently in college and have only begun to tough the tip of the iceberg into website development. I have learned a moderate amount of html and css code, but have only done very little with javascript. </p>
+            <p>I have a good foundation in HTML5, including semantic markup, forms, and accessibility. I have about six month of experience in html. I have currently taken four different classes related to the field of technology. I have taken digital literacy, which is al about being literate with technology from computer hardware to how they function as wll as the internet of things. I have also taken intro to programming and website development 1, They cover the basics and some advanced aspects of html, css, javascript, and c# all together. The furth class it cloud fundemental which has to do with cloud computing.</p>
+            <p>My experience extends to CSS and JavaScript, enabling me to create responsive and interactive web applications. I am currently capable of making websites look simple and acceptable by most people, I only chose to make this one all black to make it very easy on the eyes of the veiwer.</p>
+			<p>I pride myself on being an honest individual and love to learn the functionality of things. I am very technically oriented and curious about many things, especially technology. Learning about it has shown me a lot to the point of building my own computer and installing the OS myself at home.</p>
+			<p>From here on out its not really about my skills or career related activities, so if your just looking for that the rest isn't it. My hobbies and interests include Bushcrafting, Homesteading, Overlanding, Locksmithing, and Cooking. I especially enjoy practicing bushcraft as it is a mixture of many outdoor activities including hunting, fishing, camping, hiking, and crafting. I enjoy all of the outdoor activities I participate in due to it giving me a balanced life of both indoor and outdoor enviorments, allowing me to be comfortable in many different scenarios. Overall I like a lot of physical activites that are simutaneously educational.</p>
+			<p>Down below are some demonstrations of my programming knowledge as well as my experience in each language.</p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <tr>
+                    <th>Skills</th>
+                    <th>Proficiency</th>
+                </tr>
+                <tr>
+                    <td>HTML5</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Beginner</td>
+                </tr>
+				<tr>
+                    <td>C#</td>
+                    <td>Intermediate</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Recent Projects</h2>
+            <div class="carousel">
+                <img class="active" src="image1.jpg" alt="Project 1-Part 1">
+                <img src="image2.jpg" alt="Project 1-Part 2">
+                <img src="image3.jpg" alt="Project 1-Part 3">
+            </div>
+        </section>
+        <footer>
+            <p>If you are looking to have a conversation with me about any of this.</p>
+			<p>Contact me at: laketl630@gmail.com, (1) 417-771-1014</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach((image) => {
+                    image.classList.remove('active');
+                });
+
+                images[index].classList.add('active');
+            }
+
+            function startCarousel() {
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                }, 3000); 
+            }
+
+            startCarousel();
+        };
+    </script>
+</body>
+</html>
